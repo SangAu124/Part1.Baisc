@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		808EA0B026FDD147003F88ED /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808EA0AF26FDD147003F88ED /* Quote.swift */; };
 		80C14E1926FDBC5C005AC33A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C14E1826FDBC5C005AC33A /* AppDelegate.swift */; };
 		80C14E1B26FDBC5C005AC33A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C14E1A26FDBC5C005AC33A /* SceneDelegate.swift */; };
 		80C14E1D26FDBC5C005AC33A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C14E1C26FDBC5C005AC33A /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		808EA0AF26FDD147003F88ED /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		80C14E1526FDBC5C005AC33A /* FamousSaying.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamousSaying.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C14E1826FDBC5C005AC33A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80C14E1A26FDBC5C005AC33A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				80C14E1826FDBC5C005AC33A /* AppDelegate.swift */,
 				80C14E1A26FDBC5C005AC33A /* SceneDelegate.swift */,
 				80C14E1C26FDBC5C005AC33A /* ViewController.swift */,
+				808EA0AF26FDD147003F88ED /* Quote.swift */,
 				80C14E1E26FDBC5C005AC33A /* Main.storyboard */,
 				80C14E2426FDBC60005AC33A /* Assets.xcassets */,
 				80C14E2626FDBC60005AC33A /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				80C14E1D26FDBC5C005AC33A /* ViewController.swift in Sources */,
 				80C14E1926FDBC5C005AC33A /* AppDelegate.swift in Sources */,
 				80C14E1B26FDBC5C005AC33A /* SceneDelegate.swift in Sources */,
+				808EA0B026FDD147003F88ED /* Quote.swift in Sources */,
 				80C14E2326FDBC5C005AC33A /* FamousSaying.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="EuI-IF-vb4">
             <objects>
-                <viewController id="tPn-Dg-eyC" sceneMemberID="viewController">
+                <viewController id="tPn-Dg-eyC" customClass="ViewController" customModule="FamousSaying" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EoO-CR-zaE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQk-oc-UM1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQk-oc-UM1">
                                         <rect key="frame" x="20" y="180" width="326" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -55,6 +55,9 @@
                                 <rect key="frame" x="169" y="333" width="76.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="명언 생성"/>
+                                <connections>
+                                    <action selector="tapQuoteGeneratorButton:" destination="tPn-Dg-eyC" eventType="touchUpInside" id="gXr-Kz-HiD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m8d-Sb-8jk"/>
@@ -70,70 +73,19 @@
                             <constraint firstItem="m6O-zq-4EX" firstAttribute="top" secondItem="m8d-Sb-8jk" secondAttribute="top" constant="24" id="rxb-ps-Kr2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="QuoteLabel" destination="pAF-ki-HdS" id="Fmm-7X-SOU"/>
+                        <outlet property="nameLabel" destination="JQk-oc-UM1" id="Prh-Nj-jV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujC-VF-AnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-680" y="147"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FamousSaying" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="랜덤색상" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67j-vk-vsZ">
-                                <rect key="frame" x="24" y="68" width="366" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9t-Qf-xbw">
-                                <rect key="frame" x="20" y="124" width="374" height="200"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="TUo-LD-1SK"/>
-                                    <constraint firstAttribute="height" constant="200" id="pcX-3y-92w"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-b7-NSy">
-                                <rect key="frame" x="179" y="358" width="56" height="30"/>
-                                <state key="normal" title="색상 변경"/>
-                                <connections>
-                                    <action selector="tapChangeColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTw-t9-rAk"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Aeo-b7-NSy" firstAttribute="top" secondItem="U9t-Qf-xbw" secondAttribute="bottom" constant="34" id="0zH-Ip-jKt"/>
-                            <constraint firstItem="Aeo-b7-NSy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LUd-Pm-5Yo"/>
-                            <constraint firstItem="U9t-Qf-xbw" firstAttribute="top" secondItem="67j-vk-vsZ" secondAttribute="bottom" constant="20" id="bss-BE-xL1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U9t-Qf-xbw" secondAttribute="trailing" constant="20" id="cEI-T8-RM3"/>
-                            <constraint firstItem="U9t-Qf-xbw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="heg-Zy-SjC"/>
-                            <constraint firstItem="67j-vk-vsZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="kfa-EQ-wGu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="67j-vk-vsZ" secondAttribute="trailing" constant="24" id="rws-cJ-tGU"/>
-                            <constraint firstItem="Aeo-b7-NSy" firstAttribute="centerX" secondItem="U9t-Qf-xbw" secondAttribute="centerX" id="tIu-6T-Yy4"/>
-                            <constraint firstItem="67j-vk-vsZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="wVo-e0-8Ey"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="colorView" destination="U9t-Qf-xbw" id="KHj-K9-8ML"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="222" y="147"/>
-        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
