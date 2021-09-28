@@ -71,27 +71,45 @@ func popViewController(animated: Bool) -> UIViewController?
 // - 뷰 컨트롤러의 뷰가 계층에서 사라진 뒤에 호출
 // - 뷰가 사라지는 것돠 관련된 추가 작업
 
-
+//화면간 데이터 전달법
 
 
 
 
 import UIKit
 
-class ExViewController: UIViewController {
+class ExViewController: UIViewController, SendDataDelegate {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     @IBAction func tabCodePresentButton(_ sender: UIButton) {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePresentViewController") else {return}
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePresentViewController") as? CodePresentViewController else {return}
         viewController.modalPresentationStyle = .fullScreen
+        viewController.name = "SangAu"
+        viewController.delegate = self
         self.present(viewController, animated: true, completion: nil)
     }
+    
+    
     @IBAction func tabCodePushButton(_ sender: UIButton) {
-        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") else { return }
+        guard let viewController = self.storyboard?.instantiateViewController(withIdentifier: "CodePushViewController") as? CodePushViewController else { return }
+        viewController.name = "SangAu"
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? SeguePushViewController{
+            viewController.name = "SangAu"
+        }
+    }
+    
+    func sendData(name: String) {
+        self.nameLabel.text = name
+        self.nameLabel.sizeToFit()
     }
 }
