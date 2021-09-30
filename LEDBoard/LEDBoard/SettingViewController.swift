@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LEDBoardSettingDelegate: AnyObject{
-    func changedSetting(text: String?, textColor: UIColor, textbackgroundColor: UIColor)
+    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
 }
 
 class SettingViewController: UIViewController {
@@ -24,11 +24,21 @@ class SettingViewController: UIViewController {
     
     weak var delegate: LEDBoardSettingDelegate?
     
+    var ledtext: String?
     var textColor: UIColor = .yellow
     var backgroundColor: UIColor = .black
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureView()
+    }
+    
+    private func configureView(){
+        if let ledtext = self.ledtext{
+            self.textField.text = ledtext
+        }
+        self.changeTextColor(color: self.textColor)
+        self.changeBackgroundColorButton(color: self.backgroundColor)
     }
     
     @IBAction func tabTextColorButton(_ sender: UIButton) {
@@ -46,13 +56,13 @@ class SettingViewController: UIViewController {
     
     @IBAction func tabBackgroundColorButton(_ sender: UIButton) {
         if sender == self.blackButton{
-            self.changeBackgroundColor(color: .black)
+            self.changeBackgroundColorButton(color: .black)
             self.backgroundColor = .black
         }else if sender == self.blueButton {
-            self.changeBackgroundColor(color: .blue)
+            self.changeBackgroundColorButton(color: .blue)
             self.backgroundColor = .blue
         }else{
-            self.changeBackgroundColor(color: .orange)
+            self.changeBackgroundColorButton(color: .orange)
             self.backgroundColor = .orange
         }
     }
@@ -61,7 +71,9 @@ class SettingViewController: UIViewController {
         self.delegate?.changedSetting(
             text: self.textField.text,
             textColor: self.textColor,
-            textbackgroundColor: self.backgroundColor)
+            backgroundColor: self.backgroundColor
+        )
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func changeTextColor(color: UIColor){
@@ -70,7 +82,7 @@ class SettingViewController: UIViewController {
         self.greenButton.alpha = color == UIColor.green ? 1 : 0.2
     }
     
-    private func changeBackgroundColor(color: UIColor){
+    private func changeBackgroundColorButton(color: UIColor){
         self.blackButton.alpha = color == UIColor.black ? 1 : 0.2
         self.blueButton.alpha = color == UIColor.blue ? 1 : 0.2
         self.orangeButton.alpha = color == UIColor.orange ? 1 : 0.2

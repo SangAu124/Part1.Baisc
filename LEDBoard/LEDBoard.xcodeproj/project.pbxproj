@@ -63,12 +63,12 @@
 				808EA0BD2700A6B7003F88ED /* AppDelegate.swift */,
 				808EA0BF2700A6B7003F88ED /* SceneDelegate.swift */,
 				808EA0C12700A6B7003F88ED /* ViewController.swift */,
+				808EA1052703395C003F88ED /* SettingViewController.swift */,
 				808EA0C32700A6B7003F88ED /* Main.storyboard */,
 				808EA0C92700A6B9003F88ED /* Assets.xcassets */,
 				808EA0CB2700A6B9003F88ED /* LaunchScreen.storyboard */,
 				808EA0CE2700A6B9003F88ED /* Info.plist */,
 				808EA0C62700A6B7003F88ED /* LEDBoard.xcdatamodeld */,
-				808EA1052703395C003F88ED /* SettingViewController.swift */,
 			);
 			path = LEDBoard;
 			sourceTree = "<group>";
