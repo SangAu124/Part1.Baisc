@@ -13,6 +13,7 @@
 		8060B296274A77B300313AC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8060B294274A77B300313AC3 /* Main.storyboard */; };
 		8060B298274A77B500313AC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8060B297274A77B500313AC3 /* Assets.xcassets */; };
 		8060B29B274A77B500313AC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8060B299274A77B500313AC3 /* LaunchScreen.storyboard */; };
+		8060B2A3274B1D8100313AC3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060B2A2274B1D8100313AC3 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8060B297274A77B500313AC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8060B29A274A77B500313AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8060B29C274A77B500313AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8060B2A2274B1D8100313AC3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8060B297274A77B500313AC3 /* Assets.xcassets */,
 				8060B299274A77B500313AC3 /* LaunchScreen.storyboard */,
 				8060B29C274A77B500313AC3 /* Info.plist */,
+				8060B2A2274B1D8100313AC3 /* Task.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8060B2A3274B1D8100313AC3 /* Task.swift in Sources */,
 				8060B293274A77B300313AC3 /* ViewController.swift in Sources */,
 				8060B28F274A77B300313AC3 /* AppDelegate.swift in Sources */,
 				8060B291274A77B300313AC3 /* SceneDelegate.swift in Sources */,

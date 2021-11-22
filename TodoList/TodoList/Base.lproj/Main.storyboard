@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="AWt-34-75d" style="IBUITableViewCellStyleDefault" id="7k0-qV-cd4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="AWt-34-75d" style="IBUITableViewCellStyleDefault" id="7k0-qV-cd4">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7k0-qV-cd4" id="iYQ-Pc-dNK">
@@ -66,12 +66,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mg2-aX-cnW">
-                        <barButtonItem key="leftBarButtonItem" title="수정" id="wwM-h4-W18"/>
+                        <barButtonItem key="leftBarButtonItem" title="수정" id="wwM-h4-W18">
+                            <connections>
+                                <action selector="tabEfitButton:" destination="BYZ-38-t0r" id="Sdk-vM-eWW"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem id="3YG-TH-sqQ"/>
-                            <barButtonItem systemItem="add" id="wNx-By-hNK"/>
+                            <barButtonItem systemItem="add" id="wNx-By-hNK">
+                                <connections>
+                                    <action selector="tabAddButton:" destination="BYZ-38-t0r" id="0FR-Yx-Gsw"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="qG8-77-bGH" id="HaQ-OQ-Ooq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
