@@ -61,11 +61,11 @@
 				8060B28E274A77B300313AC3 /* AppDelegate.swift */,
 				8060B290274A77B300313AC3 /* SceneDelegate.swift */,
 				8060B292274A77B300313AC3 /* ViewController.swift */,
+				8060B2A2274B1D8100313AC3 /* Task.swift */,
 				8060B294274A77B300313AC3 /* Main.storyboard */,
 				8060B297274A77B500313AC3 /* Assets.xcassets */,
 				8060B299274A77B500313AC3 /* LaunchScreen.storyboard */,
 				8060B29C274A77B500313AC3 /* Info.plist */,
-				8060B2A2274B1D8100313AC3 /* Task.swift */,
 			);
 			path = TodoList;
 			sourceTree = "<group>";

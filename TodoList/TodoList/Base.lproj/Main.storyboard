@@ -68,7 +68,7 @@
                     <navigationItem key="navigationItem" id="Mg2-aX-cnW">
                         <barButtonItem key="leftBarButtonItem" title="수정" id="wwM-h4-W18">
                             <connections>
-                                <action selector="tabEfitButton:" destination="BYZ-38-t0r" id="Sdk-vM-eWW"/>
+                                <action selector="tabEditButton:" destination="BYZ-38-t0r" id="KbS-yY-phm"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -81,6 +81,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="wwM-h4-W18" id="hmc-Rj-5s3"/>
                         <outlet property="tableView" destination="qG8-77-bGH" id="HaQ-OQ-Ooq"/>
                     </connections>
                 </viewController>
